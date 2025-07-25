@@ -13,6 +13,7 @@ def calculate_risk_score(data):
     Returns:
         float: Risk score (income/debt ratio with zero debt protection)
     """
+    # Updated calculation with improved zero debt handling
     return data['income'] / max(data['debt'], 1)
 
 
